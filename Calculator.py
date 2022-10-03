@@ -22,16 +22,18 @@ while cont:
   if oper == '+': # can use a dictionay for this which can minimize the code 
     ans = addition(num1,num2)
     print (f"{num1} {oper} {num2} = {ans}")
-  if oper == '-':
+  elif oper == '-':
     ans = subtract(num1,num2)
     print (f"{num1} {oper} {num2} = {ans}")
-  if oper == '*':
+  elif oper == '*':
     ans = multiply(num1,num2)
     print (f"{num1} {oper} {num2} = {ans}")
-  if oper == '/':
+  elif oper == '/':
     ans = division(num1,num2)
     print (f"{num1} {oper} {num2} = {ans}")
-    num1 = ans
+  else:
+    print("Invalid operator")
+  num1 = ans
   choice = input (f"Type 'y' to continue calculating with {ans}, or 'n' to start a new calculation : " ).lower()
   if choice == 'n':
     os.system('cls')
