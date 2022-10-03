@@ -33,13 +33,12 @@ while cont:
     print (f"{num1} {oper} {num2} = {ans}")
   else:
     print("Invalid operator")
-  num1 = ans
   choice = input (f"Type 'y' to continue calculating with {ans}, or 'n' to start a new calculation : " ).lower()
   if choice == 'n':
     os.system('cls')
     num1= float(input("what is the first Number? "))
   elif choice == 'y':
-    pass
+    num1 = ans
   else:
     print("invalid choice.")
     cont = False
